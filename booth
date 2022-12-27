@@ -1,0 +1,27 @@
+import serial
+import random
+import time
+
+a = random.randint(0, 2)
+
+
+arduino = serial.Serial('COM6', 9600)
+time.sleep(3)
+
+if a == 0:  # rock
+
+    arduino.write(b'\n0')
+
+    print(b'0\n')
+
+elif a == 1:  # paper
+
+    arduino.write(b'\n1\n')
+
+    print(b'1\n')
+
+elif a == 2:  # scissors
+
+    arduino.write(b'\n2\n')
+
+    print(b'2\n')
